@@ -26,7 +26,7 @@ TEMPLATE_DIR = os.path.join(BASE_DIR_TEMP, 'templates')
 SECRET_KEY = '*^7#bqodcn-v3bm(fsr7kcre%3l(+8b3w#kc-+u$2&!%xxsx1@'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['djangocodeclub.herokuapp.com', 'localhost']
 
@@ -118,7 +118,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles'),
+#STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles'),
 
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static')),
 django_heroku.settings(locals())
