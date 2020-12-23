@@ -26,9 +26,9 @@ TEMPLATE_DIR = os.path.join(BASE_DIR_TEMP, 'templates')
 SECRET_KEY = '*^7#bqodcn-v3bm(fsr7kcre%3l(+8b3w#kc-+u$2&!%xxsx1@'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['djangocodeclub.herokuapp.com', 'localhost']
 
 # Application definition
 
@@ -44,6 +44,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -117,5 +118,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles'),
+
+STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static')),
 django_heroku.settings(locals())
