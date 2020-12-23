@@ -12,7 +12,6 @@ idna==2.10
 psycopg2==2.8.6
 python-dateutil==2.8.1
 pytz==2020.4
-quote==2.0.4
 quotes==0.0.3
 requests==2.25.1
 six==1.15.0
